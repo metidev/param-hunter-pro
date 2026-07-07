@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8" />
+<title>ParamHunter Pro</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="ph-header">
+    <div class="ph-title">
+      <img src="icons/icon48.png" alt="" class="ph-logo" />
+      <div>
+        <h1>ParamHunter Pro</h1>
+        <div class="ph-subtitle" id="ph-origin">Loading...</div>
+      </div>
+    </div>
+    <div class="ph-count" id="ph-count">0</div>
+  </header>
+
+  <div class="ph-toolbar">
+    <input type="text" id="ph-search" placeholder="Search parameter name…" />
+    <button id="ph-rescan" title="Rescan the page">🔄 Rescan</button>
+  </div>
+
+  <div class="ph-tabs" id="ph-tabs"></div>
+  <div class="ph-scope-hint" id="ph-scope-hint">Scope: <b>All</b> — export/copy actions apply to all categories.</div>
+
+  <main id="ph-list" class="ph-list">
+    <div class="ph-empty" id="ph-empty">Scanning the page… if nothing appears, click "Rescan".</div>
+  </main>
+
+  <footer class="ph-footer">
+    <button id="ph-copy-names">📋 Copy Names</button>
+    <button id="ph-copy-gap" title="Copies as param1=XNLV0&param2=XNLV1&... just like GAP">📋 Copy as GAP Format</button>
+    <button id="ph-export-txt">⬇️ Export Wordlist (TXT)</button>
+    <button id="ph-clear" class="ph-danger">🗑️ Clear</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

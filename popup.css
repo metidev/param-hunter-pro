@@ -1,0 +1,192 @@
+:root {
+  --bg: #0f1117;
+  --card: #171a23;
+  --border: #262b38;
+  --text: #e7e9ee;
+  --muted: #9aa1b1;
+  --accent: #7c3aed;
+  --accent2: #22d3ee;
+  --danger: #ef4444;
+  --sensitive: #f59e0b;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  width: 420px;
+  max-width: 420px;
+  max-height: 600px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, "Vazirmatn", sans-serif;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #1c1030, #10131c);
+  border-bottom: 1px solid var(--border);
+}
+
+.ph-title { display: flex; align-items: center; gap: 10px; }
+.ph-logo { width: 34px; height: 34px; border-radius: 8px; }
+.ph-title h1 { font-size: 15px; margin: 0; }
+.ph-subtitle { font-size: 11px; color: var(--muted); max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ph-count {
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.ph-toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ph-toolbar input {
+  flex: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+
+.ph-toolbar button {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ph-toolbar button:hover { border-color: var(--accent); }
+
+.ph-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ph-tab {
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+}
+.ph-tab.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+.ph-scope-hint {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 4px 12px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.ph-scope-hint b { color: var(--accent2); }
+
+.ph-list {
+  overflow-y: auto;
+  max-height: 320px;
+  padding: 6px 10px;
+}
+
+.ph-empty { color: var(--muted); text-align: center; padding: 30px 10px; font-size: 12px; }
+
+.ph-group-title {
+  font-size: 11px;
+  color: var(--accent2);
+  margin: 10px 4px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.ph-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: var(--card);
+  margin-bottom: 4px;
+  border: 1px solid transparent;
+}
+.ph-row:hover { border-color: var(--border); }
+
+.ph-param-name {
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 12.5px;
+  direction: ltr;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.ph-sensitive { color: var(--sensitive); font-weight: 700; }
+.ph-sensitive::after { content: " ⚠"; }
+
+.ph-meta {
+  font-size: 10px;
+  color: var(--muted);
+  direction: ltr;
+}
+
+.ph-badge-count {
+  font-size: 10px;
+  background: #262b38;
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-inline-start: 6px;
+}
+
+.ph-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+}
+
+.ph-footer button {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 8px 6px;
+  font-size: 11.5px;
+  line-height: 1.3;
+  cursor: pointer;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: center;
+  min-width: 0;
+  width: 100%;
+}
+.ph-footer button:hover { border-color: var(--accent); }
+.ph-danger { color: var(--danger) !important; border-color: var(--danger) !important; }
